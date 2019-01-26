@@ -1,0 +1,91 @@
+[
+    {
+      "track" : "01. ",
+      "title": "I Was Made To Love Her",
+      "artist": "Stevie Wonder",
+      "album": "I Was Made To Love Her",
+      "cover": "IWasMadeToLoveHer.jpg",
+      "song" : "IWasMadeToLoveHer.mp3"
+    },
+
+    {
+      "track" : "02. ",
+      "title": "For Once in My Life",
+      "artist": "Stevie Wonder",
+      "album": "For Once in My Life",
+      "cover": "ForOnceInMyLife.jpg",
+      "song" : "ForOnceInMyLife.mp3"
+    },
+
+    {
+      "track" : "03. ",
+      "title": "My Cherie Amour",
+      "artist": "Stevie Wonder",
+      "album": "My Cherie Amour",
+      "cover": "MyCherieAmour.jpg",
+      "song" : "MyCherieAmour.mp3"
+    },
+
+    {
+      "track" : "04. ",
+      "title": "Living for the City",
+      "artist": "Stevie Wonder",
+      "album": "Innervisions",
+      "cover": "Innervisions.jpg",
+      "song" : "LivingForTheCity.mp3"
+    },
+
+    {
+      "track" : "05. ",
+      "title": "Heaven Is 10 Zillion Light Years Away'",
+      "artist": "Stevie Wonder",
+      "album": "Fulfillingness' First Finale",
+      "cover": "FulfillingnessFirstFinale.jpg",
+      "song" : "HeavenIs10ZillionLightYearsAway.mp3"
+    },
+
+    {
+      "track" : "06. ",
+      "title": "I Wish",
+      "artist": "Stevie Wonder",
+      "album": "Songs in the Key of Life Vol. 1",
+      "cover": "SongsInTheKeyOfLifeVol1.jpg",
+      "song" : "IWish.mp3"
+    },
+
+    {
+      "track" : "07. ",
+      "title": "Isn't She Lovely",
+      "artist": "Stevie Wonder",
+      "album": "Songs in the Key of Life Vol. 2",
+      "cover": "SongsInTheKeyOfLifeVol2.jpg",
+      "song" : "IsntSheLovely.mp3"
+    },
+
+    {
+      "track" : "08. ",
+      "title": "As",
+      "artist": "Stevie Wonder",
+      "album": "Songs in the Key of Life Vol. 2",
+      "cover": "SongsInTheKeyOfLifeVol2.jpg",
+      "song" : "As.mp3"
+    },
+
+    {
+      "track" : "09. ",
+      "title": "All I Do",
+      "artist": "Stevie Wonder",
+      "album": "Hotter Than July",
+      "cover": "HotterThanJuly.jpg",
+      "song" : "AllIDo.mp3"
+    },
+
+    {
+      "track" : "10. ",
+      "title": "Do I Do",
+      "artist": "Stevie Wonder",
+      "album": "Stevie Wonder's Original Musiquarium I",
+      "cover": "StevieWondersOriginalMusiquariumI.jpg",
+      "song" : "DoIDo.mp3"
+    }
+  ]

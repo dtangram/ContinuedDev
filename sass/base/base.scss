@@ -1,0 +1,1268 @@
+*{
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background: #CCC;
+	color: $colorWhite;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+	position: relative;
+}
+
+
+
+/* TYPOGRAPHY ================================== */
+h1, h2{
+  font-weight: $fontWeightBold;
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+h1{
+  color: $colorWhite;
+  font-weight: bold;
+}
+
+h2{
+	font-size: 2em;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.currentLink a{
+  color: $colorOrange;
+  font-weight: $fontWeightBold;
+  text-decoration: underline;
+}
+
+a{
+  color: $colorWhite;
+
+  &:hover{
+    color: $colorOrange;
+    text-decoration: underline;
+  }
+}
+
+p{
+	color: $colorWhite;
+  font-size: .8em;
+}
+
+.graphic{
+  background: $colorOrange;
+  @extend %center-element;
+  height: 10px;
+  margin-bottom: 100px;
+  width: 70px;
+}
+
+.logo_graphic{
+  background: url(../img/logo_graphic.png) no-repeat 0 0 / cover;
+  @extend %center-element;
+  height: 70px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -36px;
+  width: 70px;
+}
+
+.row{
+  flex-wrap: nowrap;
+
+  @include mq(mediumLargeMd){
+    flex-wrap: wrap;
+  }
+}
+
+button{
+  background: $colorOrange;
+  bottom: 30px;
+  @extend %center-element;
+  color: $colorWhite;
+  cursor: pointer;
+  min-height: 40px;
+  padding: 10px 0;
+  width: 54%;
+}
+
+form{
+  background: $colorBlue;
+  border-radius: 15px;
+  @extend %center-element;
+  display: inline-block;
+  // height: 520px;
+  left: 0;
+  padding: 30px 1%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 120px;
+  width: 350px;
+
+  p{
+    font-size: 1em;
+    margin-bottom: 7px;
+  }
+}
+
+input{
+  border-radius: 8px;
+  height: 35px;
+  margin-bottom: 25px;
+  padding: 10px 1%;
+  width: 100%;
+}
+
+
+
+/* BASE STRUCTURE =============================== */
+#main, #listenWrap, #playerWrap{
+  display: flex;
+  flex-direction: column;
+  @extend %center-element;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0;
+  // padding-bottom: 170px;
+  position: relative;
+  width: 100%;
+
+  @include mq(small){
+    padding-bottom: 80px;
+  }
+
+  @include mq(mediumLarge){
+    width: 100%;
+  }
+}
+
+
+
+/* HEADER ================================== */
+header{
+  height: 124px;
+  margin-bottom: 40px;
+  padding: 20px 9%;
+  position: fixed;
+	width: 100%;
+  z-index: 999;
+
+  @include mq(small){
+    width: 100%;
+  }
+
+  @include mq(medium){
+    background-position: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  /*LOGO*/
+  > div:nth-child(1){
+  	display: inline-block;
+  	width: 30%;
+
+    @include mq(small){
+      width: 50% !important;
+    }
+
+    @include mq(medium){
+      width: 40%;
+    }
+
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+
+      img{
+        float: left;
+        margin-right: 1%;
+        width: 10%;
+
+        @include mq(small){
+          margin-right: 2%;
+          width: 45px;
+        }
+
+        @include mq(medium){
+          width: 15px;
+        }
+      }
+
+      h1{
+        color: $colorOrange;
+        font-size: 1.5em;
+        font-weight: $fontWeight;
+        padding-top: 20px;
+
+        @include mq(mediumLargeMd2){
+          font-size: 1.3em;
+        }
+
+        @include mq(mediumLargeMd){
+          padding-top: 3px;
+        }
+
+        span{
+          font-weight: $fontWeightBold;
+        }
+      }
+    }
+  }
+
+  /*NAVIGATION*/
+  nav{
+    float: right;
+    margin-right: 0;
+
+    &.navbar{
+      padding-top: 20px;
+
+      @include mq(mediumLarge){
+        padding-top: 3px;
+      }
+    }
+
+    @include mq(small){
+      right: 26px !important;
+    }
+
+    @include mq(medium){
+      position: absolute;
+      margin-right: 0;
+      top: 19px;
+      z-index: 99;
+      width: auto;
+    }
+
+    img{
+      cursor: pointer;
+      display: none;
+      width: 30px;
+    }
+
+    img:nth-child(1){
+      @include mq(medium){
+        display: block;
+        float: right;
+      }
+    }
+
+    img:nth-child(2){
+      @include mq(medium){
+        float: right;
+      }
+    }
+
+    div.container{
+      ul{
+        visibility: visible;
+
+        @include mq(medium){
+          background: $colorCharcoal;
+          margin-top: 38px;
+          visibility: hidden;
+        };
+
+        @include mq(medium){
+          display: flex;
+          flex-direction: column;
+        }
+
+        li{
+          padding: 0;
+        	text-align: center;
+          width: 100px;
+
+          @include mq(medium){
+            font-size: .9em;
+            margin-bottom: 20px;
+            text-align: left;
+            width: 65px;
+          }
+
+          a{
+            font-size: .9em;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            &:last-child{
+              margin-left: 7%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bckColor{
+    background: #2B2B2B;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+
+
+section{
+  height: 950px;
+  position: relative;
+  width: 100%;
+}
+
+
+
+section:nth-child(2){
+  background: rgba(0, 0, 0, .8);
+
+  h1{
+    font-family: $fontFamily;
+    font-size: 5em;
+    margin-bottom: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 40%;
+
+    @include mq(mediumLarge){
+      font-size: 3.5em;
+    }
+
+    @include mq(small){
+      font-size: 2em;
+    }
+  }
+
+  .graphic{
+    @extend %center-element;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 490px;
+
+    @include mq(mediumLarge){
+      top: 460px;
+    }
+  }
+
+  #bck{
+    min-width: 2050px;
+    min-height: 950px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+
+		#bckRotate{
+			margin: 0;
+
+			li{
+        height: 950px;
+        width: 2050px;
+			}
+
+      li:nth-child(1){
+        background: url(../img/imgHero1.jpg) no-repeat 0 0 / cover;
+      }
+
+      li:nth-child(2){
+        background: url(../img/imgHero2.jpg) no-repeat 0 0 / cover;
+      }
+
+      li:nth-child(3){
+        background: url(../img/imgHero3.jpg) no-repeat 0 0 / cover;
+      }
+
+      li:nth-child(4){
+        background: url(../img/imgHero4.jpg) no-repeat 0 0 / cover;
+      }
+
+      li img{
+        width: 100%;
+      	height: 100%;
+      }
+		}
+	}
+}
+
+
+
+#main section:nth-child(3){
+  background: $colorWhite;
+
+  @include mq(mediumLargeMd){
+    height: 1950px;
+  }
+
+  h2{
+    color: $colorCharcoal;
+  }
+
+  .graphic{
+    margin-bottom: 200px;
+
+    @include mq(mediumLargeMd){
+      margin-bottom: 100px;
+    }
+  }
+
+  article{
+    height: 253px;
+
+    .row{
+      .col-lg-4{
+        flex: inherit;
+      }
+
+      div{
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-right: 10%;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+
+        @include mq(mediumLargeMd){
+          margin-bottom: 50px;
+        }
+
+        @include mq(mediumLarge){
+          margin-right: 3.5px;
+        }
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &:nth-child(1){
+          background: url(../img/Alternative.png) no-repeat 0 0 / cover;
+        }
+
+        &:nth-child(2){
+          background: url(../img/Pop.png) no-repeat 0 0 / cover;
+        }
+
+        &:nth-child(3){
+          background: url(../img/Rap.png) no-repeat 0 0 / cover;
+        }
+
+        p{
+          background: rgba(0, 0, 0, .7);
+          font-size: 2em;
+          height: 100%;
+          padding: 33% 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+#main section:nth-child(4){
+  background: $colorBlue;
+
+  @include mq(mediumLargeMd){
+    height: auto;
+  }
+
+  h2{
+    // color: $colorWhite;
+  }
+
+  article{
+    height: 253px;
+
+    @include mq(mediumLargeMd){
+      height: auto;
+      max-width: 540px;
+    }
+
+    p{
+      // color: $colorDarkGray;
+      font-size: 1.1em;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
+
+    div{
+      .col-lg-3{
+        flex: inherit;
+      }
+
+      div{
+        height: 493px;
+        margin-right: 10%;
+
+        @include mq(mediumLargeMd){
+          margin: 0 auto 50px;
+        }
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+
+      div:nth-child(1){
+        background: url(../img/img1.jpg) no-repeat 0 0 / contain;
+      }
+
+      div:nth-child(2){
+        background: url(../img/img2.jpg) no-repeat 0 0 / contain;
+      }
+
+      div:nth-child(3){
+        background: url(../img/img3.jpg) no-repeat 0 0 / contain;
+      }
+
+      div:nth-child(4){
+        background: url(../img/img4.jpg) no-repeat 0 0 / contain;
+      }
+    }
+  }
+}
+
+
+
+#listenWrap, #playerWrap{
+  header{
+    position: absolute;
+  }
+}
+
+
+
+#signup, #signin{
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, .7);
+  display: none;
+  margin-top: -20px;
+  min-height: inherit;
+  min-width: inherit;
+  opacity: 0;
+  position: absolute;
+  z-index: -5;
+
+  h2{
+    color: $colorWhite;
+    margin: 22px auto 20px;
+  }
+
+  .graphic{
+    margin-bottom: 30px;
+    min-height: 10px;
+    position: relative;
+    top: 0;
+  }
+
+  form{
+    input:focus{
+      border: 2px solid $colorOrange;
+    }
+
+    @include mq(medium){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+
+
+.close{
+  color: $colorWhite;
+  display: inline-block;
+  float: right;
+  font-size: .9em;
+  opacity: 1;
+  text-decoration: underline;
+  text-shadow: none;
+  z-index: 1;
+}
+
+
+
+#signup{
+  form{
+    .password{
+      margin-bottom: 40px;
+    }
+
+    button{
+      margin-bottom: 20px;
+    }
+
+    p:nth-child(8), :last-child{
+      line-height: 20px;
+      text-align: center;
+
+      a{
+        text-decoration: underline;
+      }
+    }
+
+    p:nth-child(8){
+      font-size: .8em;
+      margin-bottom: 10px;
+
+      a{
+        font-size: .8em;
+      }
+    }
+
+    :last-child{
+      font-size: .9em;
+
+      a{
+        font-size: .9em;
+      }
+    }
+  }
+}
+
+
+
+#signin{
+  form{
+    .password{
+      margin-bottom: 40px;
+    }
+
+    button{
+      margin-bottom: 20px;
+    }
+
+    p:nth-child(6), :last-child{
+      line-height: 20px;
+      text-align: center;
+
+      a{
+        text-decoration: underline;
+      }
+    }
+
+    p:nth-child(6), :last-child{
+      font-size: .9em;
+
+      a{
+        font-size: .9em;
+      }
+    }
+
+    p:nth-child(6){
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+
+.errorName, .errorEmail, .errorEmail2, .errorPassword, .errorPassword2{
+  font-weight: $fontWeightBold;
+  min-height: 20px;
+  text-align: left;
+}
+
+
+#listenWrap{
+  height: auto;
+
+  #listenHeader{
+    height: 400px;
+
+    h1, .graphic{
+      position: relative;
+    }
+
+    h1{
+      top: 150px;
+    }
+
+    .graphic{
+      top: 200px;
+    }
+  }
+
+  section:nth-child(3){
+    .container{
+      .row{
+        .col-lg-4{
+          flex: inherit;
+        }
+
+        article{
+          background: $colorBlue;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          height: 450px;
+          margin-bottom: 10px;
+          margin-right: 5%;
+          padding-left: 2%;
+          padding-right: 2%;
+          position: relative;
+          // width: 400px;
+
+          @include mq(mediumLargeMd){
+            margin: 0 auto 110px;
+            width: 400px;
+          }
+
+          &:nth-child(1) p{
+            line-height: 20px;
+          }
+        }
+
+        article:last-child{
+          margin-right: 0;
+
+          @include mq(mediumLarge){
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  #listen{
+    background:  $colorWhite;
+    height: auto;
+    padding: 0 10% 245px;
+
+    @include mq(mediumLargeMd){
+      height: 1600px;
+    }
+
+    h2{
+      color: $colorCharcoal;
+
+      @include mq(medium){
+        font-size: 1.6em;
+        margin-top: 50px;
+        padding: 0 5%;
+      }
+    }
+
+    form{
+      background: none;
+      border: 0;
+      display: inline-block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 162px;
+      width: 350px;
+
+      div{
+        border: solid 1px $colorBlack;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+      }
+
+      div input{
+        border: 0;
+        @extend %center-element;
+        position: relative;
+        top: 0;
+        width: 300px;
+
+        @include mq(medium){
+          top: 167px;
+        }
+      }
+
+      div button{
+        background: $colorGray;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        bottom: 0;
+        color: #FFF;
+        cursor: pointer;
+        min-height: auto;
+        outline: 0;
+        padding: 3px;
+        width: auto;
+      }
+
+      p{
+        color: $colorRed;
+        font-size: .9em;
+        font-weight: $fontWeightBold;
+        opacity: 0;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+    }
+
+    > article{
+      @extend %center-element;
+      height: 253px;
+      padding: 0;
+
+      .row{
+        .col-lg-4{
+          flex: inherit;
+        }
+
+        a{
+          margin-right: 3.5px;
+
+          @include mq(mediumLargeMd){
+            margin: 0 auto 110px;
+            width: 400px;
+          }
+        }
+
+        &:last-child div{
+          margin-right: 0;
+        }
+
+        &:nth-child(1) div{
+          background: url(../img/Alternative.png) no-repeat 0 0 / cover;
+        }
+
+        &:nth-child(2) div{
+          background: url(../img/Pop.png) no-repeat 0 0 / cover;
+        }
+
+        &:nth-child(3) div{
+          background: url(../img/Rap.png) no-repeat 0 0 / cover;
+        }
+
+        a div{
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          overflow: hidden;
+          position: relative;
+          // width: 493px;
+        }
+
+        a div p{
+          background: rgba(0, 0, 0, .7);
+          font-size: 1.3em;
+          height: 100%;
+          padding: 33% 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+
+    .searchResults{
+      padding: 0;
+      text-align: center;
+
+      a{
+        margin-right: 3.5px;
+      }
+
+      a.col-lg-4{
+        flex: inherit;
+        padding: 0;
+      }
+
+      a article{
+        margin-bottom: 20px;
+        display: inline-block;
+        text-align: left;
+        // width: 30.5%;
+      }
+
+      a article img{
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      a article p{
+        background: $colorDarkGray;
+        padding: 10px 5%;
+        -webkit-margin-before: -.4em;
+      }
+
+      a article p span{
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 5%;
+        color: $colorOrange;
+      }
+    }
+  }
+}
+
+
+
+#playerWrap{
+  #player{
+    @include mq(mediumLarge){
+      height: 1800px;
+    }
+
+    h2{
+      margin-bottom: 0;
+      margin-top: 150px;
+    }
+
+    .graphic{
+      @extend %center-element;
+      left: 0;
+      position: relative;
+      right: 0;
+      top: 20px;
+
+      @include mq(mediumLarge){
+        top: 460px;
+      }
+    }
+
+    > input:nth-child(1){
+      @extend %center-element;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 170px;
+      width: 300px;
+    }
+
+    .player-container{
+      display: flex;
+      flex-direction: row;
+    	width: 60%;
+    	background: $colorBlue;
+    	margin: 60px auto 0;
+    	-moz-border-radius: 10px;
+    	-webkit-border-radius: 10px;
+    	border-radius: 15px;
+      height: 530px;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+
+      @include mq(mediumLarge){
+        flex-direction: column;
+        height: 1300px;
+      }
+    }
+
+    .player-container:not(.full){
+        margin-bottom: 3%;
+    }
+
+    .player-container > div:nth-child(1){
+      margin: 0;
+      overflow: hidden;
+      width: 700px;
+
+      @include mq(mediumLarge){
+        overflow: visible;
+        width: auto;
+      }
+    }
+
+    .callout{
+      padding: 0;
+    }
+
+    #audio-player{
+      width: 100%;
+    }
+
+    #audio-image{
+    	position: relative;
+    	overflow: hidden;
+    	margin-bottom: 1%;
+      text-align: center;
+    }
+
+    .cover{
+      width: 800px;
+
+      @include mq(large){
+        width: 530px;
+      }
+    }
+
+    #audio-info{
+    	text-align: center;
+      height: 80px;
+      padding: 3%;
+    }
+
+    #audio-info .artist{
+    	font-weight: bold;
+    }
+
+    .title{
+    	font-size: 1.4em;
+      font-weight: bold;
+      line-height: 30px;
+
+      @include mq(mediumLarge){
+        font-size: 1em;
+        line-height: 25px;
+      }
+    }
+
+    #tracker{
+    	position: relative;
+    	width: 100%;
+      overflow: hidden;
+      background: #025d88;
+      height: 50px;
+      padding: 15px 7px 7px;
+      display: flex;
+    }
+
+    #progressBar{
+       width: 90%;
+       margin-top: 9px;
+       height: 10px;
+       background:url(../img/statusBar1.png) no-repeat rgb(6, 6, 6);
+       -moz-border-radius: 10px;
+     	-webkit-border-radius: 10px;
+     	border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      justify-content: space-between;
+    }
+
+    #progress{
+       background: $colorOrange;
+       -webkit-box-shadow: 0 0 11px 2px rgba(255,127,80,.75);
+    	-moz-box-shadow: 0 0 11px 2px rgba(255,127,80,.75);
+    	box-shadow: 0 0 11px 2px rgba(255,127,80,.75);
+      -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+    	/* width: 2029px; */
+    	height: 10px;
+       display: inline-block;
+       position: absolute;
+       left: -2px;
+    }
+
+    #duration, #duration2{
+    	padding:4px 8px;
+      color: $colorWhite;
+    	border-radius:5px;
+    }
+
+    .controls{
+      background: $colorWhite;
+      min-width: 100%;
+      min-height: 10%;
+      padding-top: 3%;
+      text-align: center;
+    }
+
+    #buttons{
+    	display: block;
+      margin-bottom: 2%;
+    }
+
+    button{
+      background: none;
+      bottom: 0;
+      cursor: pointer;
+      position: relative;
+      width: 15%;
+
+      @include mq(small){
+        width: 30%;
+      }
+    }
+
+    #prev img, #next img{
+      width: 30%;
+    }
+
+    #play img, #pause img{
+      width: 40%;
+    }
+
+    #volume{
+    	width: 30%;
+      padding: 0;
+        -webkit-appearance: none;
+        background: #025d88;
+        height: 10px;
+        margin: 0 auto 5%;
+        -moz-border-radius: 10px;
+       -webkit-border-radius: 10px;
+       border-radius: 10px;
+      outline: none;
+    }
+
+    #volume::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        background:url(../img/volKnob.png) no-repeat 0 0 / cover;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+    }
+
+    #playlist{
+      list-style-type: none;
+      overflow-y: scroll;
+      width: 100%;
+      height: 420px;
+      margin-bottom: 0 !important;
+      margin-left: 0 !important;
+      background: #025d88;
+      bottom: 0;
+      border-top: solid 4px #025d88;
+      border-bottom: solid 4px #025d88;
+    }
+
+    #playlist::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+      border-radius: 10px; }
+
+    #playlist::-webkit-scrollbar {
+      width: 10px;
+      background-color: #025d88; }
+
+    #playlist::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, $colorOrange), color-stop(0.72, $colorOrange), color-stop(0.86, #ad0434)); }
+
+    #playlist li{
+        cursor: pointer;
+        margin: 5px;
+        padding: 2%;
+        color: $colorWhite;
+        -webkit-transition: background .3s ease-out;
+        -moz-transition: background .3s ease-out;
+        -o-transition: background .3s ease-out;
+        transition: background .3s ease-out;
+        line-height: 30px;
+
+        @include mq(mediumLarge){
+          font-size: .8em;
+          line-height: 25px;
+        }
+    }
+
+    #playlist li:nth-child(even){
+        background: #2c0288;
+    }
+
+    #playlist li:hover{
+      background: $colorOrange;
+    }
+
+    #playlist li.active{
+      font-weight: bold;
+      font-size: 1.1em;
+    	padding: 3px;
+      background: $colorOrange;
+      color: $colorWhite;
+
+      @include mq(mediumLarge){
+        font-size: .9em;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+
+
+/* FOOTER =============================== */
+footer{
+	padding: 30px 2%;
+	background: $colorCharcoal;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  > div{
+    display: inline-block;
+    width: 500px;
+
+    @include mq(small){
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    p{
+      flex: 1;
+      float: left;
+      font-size: .8em;
+      margin-right: 5%;
+      padding-top: 12px;
+
+      @include mq(small){
+        float: none;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+    }
+
+    div{
+      img{
+        cursor: pointer;
+        float: left;
+        margin-right: 2%;
+
+        &:nth-child(4){
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    width: 220px;
+
+    li, p{
+      margin-right: 3%;
+    }
+
+    li{
+      cursor: pointer;
+      font-size: .8em;
+
+      &:hover{
+        color: $colorOrange;
+      }
+    }
+  }
+}

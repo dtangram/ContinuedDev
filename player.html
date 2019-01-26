@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="The purpose of Music Resurrectus is to remind listeners of the emotions they felt when listening to their favorite song." itemprop="description" name="description">
+  <meta content="internet radio, classics, music, rap, hip-hop, r&b, rhythm and blues, hip-hop music, songs" itemprop="keywords" name="keywords">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Music Resurrectus</title>
+
+  <link rel="icon" href="img/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css" media="screen">
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,300,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="playerWrap" class="container">
+    <header>
+      <!-- LOGO -->
+      <div tabindex="1"><a href="index.html"><img src="img/logo.png" title="Music Resurrectus Home" alt="Music Resurrectus Logo"><h1>Music<span>Resurrectus</span></h1></a></div>
+
+      <!-- NAVIGATION -->
+      <nav class="navbar navbar-expand-sm">
+        <img src="img/hamburger.png" alt="Menu for mobile devices">
+        <img src="img/close.png" alt="Close button for menu">
+
+        <div class="container">
+          <ul class="navbar-nav">
+            <li tabindex="2" class="nav-item nav-link" title="Music Resurrectus Home"><a href="index.html">Home</a></li>
+            <li tabindex="3" class="nav-item nav-link active currentLink" title="Listen"><a href="listen.html">Listen</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="bckColor"></div>
+    </header>
+
+
+
+    <section id="player">
+      <h2>Example of How Your Music Will be Displayed</h2>
+      <div class="graphic" alt="Small orange, rectangle graphic"></div>
+
+      <div class="player-container">
+        <div>
+          <div>
+            <div id="audio-image">
+          		<img class="cover" />
+          	</div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div class="callout">
+              <div id="audio-player">
+            		<div id="audio-info">
+            			<span class="title"></span>
+            		</div>
+                 <div id="tracker">
+                  <span id="duration"></span>
+            			<div id="progressBar">
+            				<span id="progress"></span>
+            			</div>
+                  <span id="duration2"></span>
+            		 </div>
+
+                 <div class="controls">
+                   <div id="buttons" class="grid-x">
+                     <button id="prev"><img src="img/prevBTN.png"></button>
+                     <button id="play"><img src="img/playBTN.png"></button>
+                     <button id="pause"><img src="img/pauseBTN.png"></button>
+                     <button id="next"><img src="img/nextBTN.png"></button>
+              		 </div>
+
+                   <input id="volume" type="range" min="0" max="10" value="5" />
+                 </div>
+
+            		 <ul id="playlist" class="hidden"></ul>
+            	</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bck" class="carousel slide" data-ride="carousel">
+		    <ul id="bckRotate" class="carousel-inner">
+		      <li class="carousel-item active"></li>
+		      <li class="carousel-item"></li>
+		      <li class="carousel-item"></li>
+		      <li class="carousel-item"></li>
+		    </ul>
+		  </div>
+    </section>
+
+
+
+    <footer>
+      <div>
+        <p></p>
+
+        <div>
+          <img src="img/facebook.png" alt="Music Resurrectus Facebook">
+          <img src="img/twitter.png" alt="Music Resurrectus Twitter">
+          <img src="img/instagram.png" alt="Music Resurrectus Instagram">
+        </div>
+      </div>
+
+      <ul>
+        <li>Help</li><p>|</p>
+        <li> Privacy</li><p>|</p>
+        <li> Terms of Use</li>
+      </ul>
+    </footer>
+  </div><!-- container -->
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/songs.js"></script>
+</body>
+</html>

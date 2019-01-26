@@ -1,0 +1,19 @@
+{
+  "name": "moredev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "author": "Douglas T. Angram",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "http-server": "^0.11.1"
+  }
+}

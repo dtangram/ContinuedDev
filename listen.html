@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="The purpose of Music Resurrectus is to remind listeners of the emotions they felt when listening to their favorite song." itemprop="description" name="description">
+  <meta content="internet radio, classics, music, rap, hip-hop, r&b, rhythm and blues, hip-hop music, songs" itemprop="keywords" name="keywords">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Music Resurrectus</title>
+
+  <link rel="icon" href="img/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css" media="screen">
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,300,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="listenWrap" class="container">
+    <header>
+      <!-- LOGO -->
+      <div tabindex="1"><a href="index.html"><img src="img/logo.png" title="Music Resurrectus Home" alt="Music Resurrectus Logo"><h1>Music<span>Resurrectus</span></h1></a></div>
+
+      <!-- NAVIGATION -->
+      <nav class="navbar navbar-expand-sm">
+        <img src="img/hamburger.png" alt="Menu for mobile devices">
+        <img src="img/close.png" alt="Close button for menu">
+
+        <div class="container">
+          <ul class="navbar-nav">
+            <li tabindex="2" class="nav-item nav-link" title="Music Resurrectus Home"><a href="index.html">Home</a></li>
+            <li tabindex="3" class="nav-item nav-link active currentLink" title="Listen"><a href="listen.html">Listen</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="bckColor"></div>
+    </header>
+
+
+
+    <section id="listenHeader">
+      <h1 tabindex="4">Reviving the Art</h1>
+      <div class="graphic" alt="Small orange, rectangle graphic"></div>
+
+      <div id="bck" class="carousel slide" data-ride="carousel">
+		    <ul id="bckRotate" class="carousel-inner">
+		      <li class="carousel-item active"></li>
+		      <li class="carousel-item"></li>
+		      <li class="carousel-item"></li>
+		      <li class="carousel-item"></li>
+		    </ul>
+		  </div>
+    </section>
+
+
+
+    <section tabindex="5" id="listen">
+      <h2 tabindex="6">Choose Music by Your Favorite Artist and Genre</h2>
+      <div class="graphic" alt="Small orange, rectangle graphic"></div>
+
+      <form>
+        <div>
+          <input tabindex="7"  id="searchInput" type="text" name="search" placeholder="Search">
+          <button type="button" name="button"><img src="img/search.png" alt="Button to search music"></button>
+        </div>
+        <p></p>
+      </form>
+
+      <article tabindex="8" class="container">
+        <div class="row">
+          <a tabindex="9" class="col-sm-12 col-md-12 col-lg-4" href="player.html" alt="Photo of the group R.E.M."><div><p>Alternative</p></div></a>
+          <a tabindex="10" class="col-sm-12 col-md-12 col-lg-4" href="player.html" alt="Photo of Prince playing his male/female symbol shaped guitar."><div><p>Pop</p></div></a>
+          <a tabindex="11" class="col-sm-12 col-md-12 col-lg-4" href="player.html" alt="Photo of Kendrick Lamar."><div><p>Rap</p></div></a>
+        </div>
+      </article>
+
+      <div class="container searchResults"></div>
+    </section>
+
+
+
+    <footer tabindex="12">
+      <div>
+        <p tabindex="13" title="©2018, Music Resurrectus. All rights reserved."></p>
+
+        <div>
+          <img tabindex="14" src="img/facebook.png" alt="Music Resurrectus Facebook">
+          <img tabindex="15" src="img/twitter.png" alt="Music Resurrectus Twitter">
+          <img tabindex="16" src="img/instagram.png" alt="Music Resurrectus Instagram">
+        </div>
+      </div>
+
+      <ul>
+        <li tabindex="17" title="Help">Help</li><p>|</p>
+        <li tabindex="18" title="Music Resurrectus Privacy Policy"> Privacy</li><p>|</p>
+        <li tabindex="19" title="Music Resurrectus Terms of Use"> Terms of Use</li>
+      </ul>
+    </footer>
+  </div><!-- container -->
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
