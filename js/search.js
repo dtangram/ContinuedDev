@@ -1,7 +1,6 @@
 const request = new XMLHttpRequest();
 const searchField = document.getElementById("searchInput");
 const magnifyGlass = document.querySelector("#listen form div button");
-// const headerTwo = document.querySelector(".container > h2");
 const submit = document.querySelector(".container > button");
 
 searchField.focus();
@@ -20,7 +19,6 @@ document.querySelector("form").addEventListener('submit', function(e){
   }
 
   else if(searchField.value > 0 || searchField.value != 0){
-    // headerTwo.style.opacity = "1";
     queryInput();
     $("#listen > article").css("display", "none");
     document.querySelector("form p").style.opacity = "0";
@@ -34,7 +32,6 @@ magnifyGlass.addEventListener("click", function(){
   }
 
   else if(searchField.value > 0 || searchField.value != 0){
-    // headerTwo.style.opacity = "1";
     queryInput();
     $("#listen > article").css("display", "none");
     document.querySelector("form p").style.opacity = "0";
@@ -49,14 +46,6 @@ function runQuery(url){
       const jsonObj = JSON.parse(request.responseText);
 
       let queryInfo = "";
-
-      // if(jsonObj.results.albummatches.album.length <= 0){
-      //   document.querySelector(".container > h2").innerHTML = "No results for " + searchField.value;
-      // }
-      //
-      // else{
-      //   headerTwo.innerHTML = "Results for " + searchField.value;
-      // }
 
       for(let i = 0; i < jsonObj.results.albummatches.album.length; i++){
           queryInfo += "<a class='col-sm-12 col-md-12 col-lg-2' href='player.html'>";

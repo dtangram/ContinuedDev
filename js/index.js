@@ -67,6 +67,8 @@ $(document).ready(function(){
   const signin = $("#signin");
   const signupCloseBTN = $("#signup .close");
   const signinCloseBTN = $("#signin .close");
+  const signinLinkForm = $("#signup form :last-child a");
+  const signupLinkForm = $("#signin form :last-child a");
   const errorName = $(".errorName");
   const errorEmail = $(".errorEmail");
   const errorEmail2 = $(".errorEmail2");
@@ -136,8 +138,8 @@ $(document).ready(function(){
 
   let signUpLink = formPosition(signupBTN, signUpClick, signup, signin, nameInput, signupLink, signupCloseBTN).signFormFunc();
   let signInLink = formPosition(signinBTN, signInClick, signin, signup, emailInput2, signinLink, signinCloseBTN).signFormFunc();
-
-
+  let signinFormLink = formPosition(signinBTN, signInClick, signin, signup, emailInput2, signinLinkForm, signinCloseBTN).signFormFunc();
+  let signupFormLink = formPosition(signupBTN, signUpClick, signup, signin, nameInput, signupLinkForm, signupCloseBTN).signFormFunc();
 
   // FORM VALIDATION
   nameInput.focusout("blur", checkName, false);
@@ -252,7 +254,7 @@ $(document).ready(function(){
   };
 
   $("#signupForm").submit(function(event){
-    // event.preventDefault();
+    event.preventDefault();
 
     let nameInputVal = $(".name").val();
     let emailInputVal = $(".email").val();
@@ -282,7 +284,7 @@ $(document).ready(function(){
   };
 
   $("#signinForm").submit(function(event){
-    // event.preventDefault();
+    event.preventDefault();
     let emailInputVal = $(".email").val();
     let emailInput2Val = $(".email2").val();
     let passwordInputVal = $(".password").val();
