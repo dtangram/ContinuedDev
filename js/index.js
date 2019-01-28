@@ -24,11 +24,11 @@ class Model{
 
   modelFunc(){
     for(let i = 0; i < this.inputArray.length; i++){
-      if(this.inputArray[i].inputEmail === this.inputArray[i].inputEmail2 && this.inputArray[i].inputEmail != null && this.inputArray[i].inputEmail2 != null && this.inputArray[i].inputPassword === this.inputArray[i].inputPassword2 && this.inputArray[i].inputPassword != null && this.inputArray[i].inputPassword2 != null){
+      if(this.inputArray[0].inputEmail == this.inputArray[i].inputEmail2 && this.inputArray[i].inputEmail != null && this.inputArray[i].inputEmail2 != null && this.inputArray[0].inputPassword == this.inputArray[i].inputPassword2 && this.inputArray[i].inputPassword != null && this.inputArray[i].inputPassword2 != null){
         console.log("You are logged in!!!");
       }
 
-      else if(this.inputArray[i].inputEmail != this.inputArray[i].inputEmail2 || this.inputArray[i].inputEmail == null || this.inputArray[i].inputEmail2 == null || this.inputArray[i].inputPassword != this.inputArray[i].inputPassword2 || this.inputArray[i].inputPassword == null || this.inputArray[i].inputPassword2 == null){
+      else if(this.inputArray[0].inputEmail != this.inputArray[i].inputEmail2 || this.inputArray[i].inputEmail == null || this.inputArray[i].inputEmail2 == null || this.inputArray[0].inputPassword != this.inputArray[i].inputPassword2 || this.inputArray[i].inputPassword == null || this.inputArray[i].inputPassword2 == null){
         console.log("Email or password are incorrect");
       }
     }
@@ -232,6 +232,23 @@ $(document).ready(function(){
   }
   //
 
+  let nameInputVal = $(".name").val();
+  let emailInputVal = $(".email").val();
+  let emailInput2Val = $(".email2").val();
+  let passwordInputVal = $(".password").val();
+  let passwordInput2Val = $(".password2").val();
+
+  if(localStorage.getItem('nameInputVal') && localStorage.getItem('emailInputVal') && localStorage.getItem('passwordInputVal')){
+    $(".name").val(localStorage.getItem('nameInputVal'));
+    $(".email").val(localStorage.getItem('emailInputVal'));
+    $(".password").val(localStorage.getItem('passwordInputVal'));
+  }
+
+  if(localStorage.getItem('emailInput2Val') && localStorage.getItem('passwordInput2Val')){
+    $(".email2").val(localStorage.getItem('emailInput2Val'));
+    $(".password2").val(localStorage.getItem('passwordInput2Val'));
+  }
+
   let main = new Controller();
 
   const addFunc = function(){
@@ -241,16 +258,12 @@ $(document).ready(function(){
     let passwordInputVal = $(".password").val();
     let passwordInput2Val = $(".password2").val();
 
-    if(localStorage.getItem('nameInputVal') && localStorage.getItem('emailInputVal') && localStorage.getItem('passwordInputVal')){
-      main.inputFunc(emailInputVal, emailInput2Val, passwordInputVal, passwordInput2Val);
-    }
+    main.inputFunc(emailInputVal, emailInput2Val, passwordInputVal, passwordInput2Val);
 
     // CLEAR INPUT FIELDS
     $(".name").val("");
     $(".email").val("");
-    $(".email2").val("");
     $(".password").val("");
-    $(".password2").val("");
   };
 
   $("#signupForm").submit(function(event){
@@ -274,9 +287,7 @@ $(document).ready(function(){
     let passwordInputVal = $(".password").val();
     let passwordInput2Val = $(".password2").val();
 
-    if(localStorage.getItem('emailInput2Val') && localStorage.getItem('passwordInput2Val')){
-      main.inputFunc(emailInputVal, emailInput2Val, passwordInputVal, passwordInput2Val);
-    }
+    main.inputFunc(emailInputVal, emailInput2Val, passwordInputVal, passwordInput2Val);
 
     // CLEAR INPUT FIELDS
     $(".email2").val("");
@@ -285,9 +296,8 @@ $(document).ready(function(){
 
   $("#signinForm").submit(function(event){
     event.preventDefault();
-    let emailInputVal = $(".email").val();
+
     let emailInput2Val = $(".email2").val();
-    let passwordInputVal = $(".password").val();
     let passwordInput2Val = $(".password2").val();
 
     //LOCAL STORAGE

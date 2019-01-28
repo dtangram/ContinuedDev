@@ -52,6 +52,7 @@ function runQuery(url){
           queryInfo += "<article>";
           queryInfo += "<p><span>" + jsonObj.results.albummatches.album[i].name + "</span></p>";
           queryInfo += "<p>" + jsonObj.results.albummatches.album[i].artist + "</p>";
+          queryInfo += "<img src='img/playButton.png' alt='Play Button'>";
           queryInfo += "<img src='" + jsonObj.results.albummatches.album[i].image[3]['#text'] + "' title='" + jsonObj.results.albummatches.album[i].name + " by " + jsonObj.results.albummatches.album[i].artist + " " + "' alt='" + jsonObj.results.albummatches.album[i].name + " by " + jsonObj.results.albummatches.album[i].artist + "'>";
           queryInfo += "</article>";
           queryInfo += "</a>";
