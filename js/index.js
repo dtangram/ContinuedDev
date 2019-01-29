@@ -309,6 +309,20 @@ $(document).ready(function(){
 
 
 
+  const logoGraphic = $("#main section:nth-child(3) .logo_graphic");
+
+  logoGraphic.mouseover(function(){
+    logoGraphic.removeClass("logo_graphic");
+    logoGraphic.addClass("logo_rotate");
+  });
+
+  logoGraphic.mouseout(function(){
+    logoGraphic.removeClass("logo_rotate");
+    logoGraphic.addClass("logo_graphic");
+  });
+
+
+
   //Hamburger menu
   document.querySelector("header nav img:nth-child(1)").addEventListener('click', function(){
       document.querySelector("header nav").style.background = "#2B2B2B";

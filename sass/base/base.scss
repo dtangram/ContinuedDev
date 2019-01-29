@@ -69,6 +69,7 @@ p{
 
 .logo_graphic{
   background: url(../img/logo_graphic.png) no-repeat 0 0 / cover;
+  cursor: pointer;
   @extend %center-element;
   height: 70px;
   left: 0;
@@ -410,6 +411,64 @@ section:nth-child(2){
 
 
 #main section:nth-child(3){
+  .logo_graphic{
+    -webkit-animation: bounce 1000ms ease-in-out infinite;
+  	-moz-animation: bounce 1000ms ease-in-out infinite;
+  	-o-animation: bounce 1000ms ease-in-out infinite;
+  	animation: bounce 1000ms ease-in-out infinite;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+
+  @-webkit-keyframes bounce {
+    0% {
+  	-webkit-transform:translateY(0%);
+    }
+    50% {
+    	-webkit-transform:translateY(-50%);
+    }
+  }
+
+  /* Mozilla Firefox 15 below */
+  @-moz-keyframes bounce {
+    0% {
+  	-webkit-transform:translateY(0);
+    }
+    50% {
+    	-moz-transform:translateY(-50%);
+    }
+  }
+
+  /* Opera 12.0 */
+  @-o-keyframes bounce {
+    0% {
+  	-webkit-transform:translateY(-50%);
+    }
+    50% {
+    	-o-transform:translateY(-30%);
+    }
+    100% {
+    	-o-transform:translateY(0);
+    }
+  }
+
+  .logo_rotate{
+    animation: globeRotate 10s linear infinite;
+    background: url(../img/logo_graphic.png) no-repeat 0 0 / cover;
+    cursor: pointer;
+    @extend %center-element;
+    height: 70px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -36px;
+    width: 70px;
+  }
+
+  @keyframes globeRotate{
+    100%{transform: rotate(1turn);}
+  }
+
   background: $colorWhite;
 
   @include mq(mediumLargeMd){
